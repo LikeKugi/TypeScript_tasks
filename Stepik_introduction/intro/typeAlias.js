@@ -1,0 +1,10 @@
+"use strict";
+var input;
+input = 100;
+console.log(input);
+input = 'Hi';
+console.log(input);
+var click;
+console.log(click);
+click = 'click';
+console.log(click);
