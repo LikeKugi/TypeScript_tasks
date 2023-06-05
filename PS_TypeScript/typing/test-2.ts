@@ -1,7 +1,7 @@
 enum EnumStatus {
-    'published',
-    'draft',
-    'deleted'
+    published,
+    draft,
+    deleted
 }
 
 type TypeRequest = {
