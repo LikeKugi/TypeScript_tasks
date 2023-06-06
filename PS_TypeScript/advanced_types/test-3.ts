@@ -13,7 +13,7 @@ interface IDataFailedTest3 {
     errorCode: number,
 }
 
-interface TypeSuccessResponseTest3 {
+interface ISuccessResponseTest3 {
     status: 'success',
     data: IDataSuccessTest3
 }
@@ -21,4 +21,14 @@ interface TypeSuccessResponseTest3 {
 interface IFailedResponseTest3{
     status: 'failed',
     data: IDataFailedTest3,
+}
+
+type TypeFTest4 = (res: ISuccessResponseTest3 | IFailedResponseTest3) => number;
+
+let getResponseTest4: TypeFTest4;
+getResponseTest4 = function (res) {
+    if (res.status === 'success') {
+        return res.data.databaseId;
+    }
+    return res.data.errorCode;
 }
